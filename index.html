@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Aplikasi Kalkulator Matematika</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="title">
+			<h1>Kalkulator Segi Empat</h1>
+			<p>Dibuat dengan HTML, CSS, dan Javascript</p>
+		</div>
+		<hr>
+		<div class="content">
+			<div class="left-content">
+				<img src="segiempat.png">
+			</div>
+			<div class="right-content">
+				<h2>Menghitung Luas dan Keliling</h2>
+				<br>
+				<label>Panjang:</label>
+				<input id="p" type="number" name="panjang" placeholder="Masukkan panjang">
+				<br>
+				<label>Lebar:</label>
+				<input id="l" type="number" name="lebar" placeholder="Masukkan lebar">
+				<br>
+				<button onclick="hitungLuas()">Hitung Luas :</button>
+				<span id="luas"></span>
+				<br>
+				<button onclick="hitungKeliling()"> Hitung Keliling : </button>
+				<span id="keliling"></span>
+			</div>
+
+		</div>
+
+	</div>
+			<footer>
+				<p>@Copyright Calc App by Jerrie X3</p>
+			</footer>
+
+
+	<script type="text/javascript">
+		function hitungLuas () {
+			let panjang = document.getElementById('p').value;
+			let lebar = document.getElementById('l').value;
+			let luas = panjang * lebar;
+			document.getElementById('luas').innerHTML = adalah ${luas} cm <sup>2</sup>;
+		}
+
+		function hitungKeliling (){
+			let panjang = document.getElementById('p').value;
+			let lebar = document.getElementById('l').value;
+			let keliling = 2* panjang + 2* lebar;
+			document.getElementById('keliling').innerHTML = `adalah ${keliling} cm `;
+
+
+		}
+
+
+	</script>
+</body>
+</html>
